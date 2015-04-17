@@ -1,0 +1,76 @@
+// Viode UI
+@import 'ui/variables'
+
+// Core variables and mixins
+@import 'bootstrap/variables'
+@import 'bootstrap/mixins'
+
+// Reset and dependencies
+@import 'bootstrap/normalize'
+@import 'bootstrap/print'
+
+// Core CSS
+@import 'bootstrap/scaffolding'
+@import 'bootstrap/type'
+@import 'bootstrap/code'
+@import 'bootstrap/grid'
+@import 'bootstrap/forms'
+
+// Components
+@import 'bootstrap/component-animations'
+@import 'bootstrap/dropdowns'
+@import 'bootstrap/navs'
+@import 'bootstrap/navbar'
+@import 'bootstrap/alerts'
+@import 'bootstrap/panels'
+@import 'bootstrap/close'
+
+// Utility classes
+@import 'bootstrap/utilities'
+@import 'bootstrap/responsive-utilities'
+
+.alert
+  .close
+    opacity: 1
+    padding: 0px 5px
+    background-color: rgba(0, 0, 0, 0.2)
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    border-radius: 3px
+    text-shadow: none
+    font-weight: 300
+    &:hover, &:focus
+      opacity: 1
+
+$colors-list: #ED5565 #DA4453 #FC6E51 #E9573F #FFCE54 #F6BB42 #A0D468 #8CC152 #4FC1E9 #3BAFDA #5D9CEC #4A89DC #EC87C0 #D770AD #F5F7FA #E6E9ED #CCD1D9 #AAB2BD #656D78 #434A54
+
+.ui-fonts
+  font-family: 'Open Sans', sans-serif
+  pre
+    display: none
+  @each $n in 300, 400, 700
+    .w#{$n}
+      font-weight: #{$n}
+
+.ui-colors
+  .swatch
+    width: 80px
+    height: 80px
+    border: 3px solid #fff
+    outline: 1px solid #AAB2BD
+    display: inline-block
+    margin: 0 10px 10px 0
+    span
+      float: left
+      width: 100%
+      color: #ECF0F1
+      background-color: #2C3E50
+      text-align: center
+      padding: 5px
+  .color-brand
+    background-color: #AC92EC
+  .color-brand-dark
+    background-color: #967ADC
+  @each $c in $colors-list
+    $i: index($colors-list, $c)
+    .color-#{$i}
+      background-color: #{$c}

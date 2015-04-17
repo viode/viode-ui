@@ -4,12 +4,13 @@ html
     meta charset="utf-8"
     meta content="width=device-width, initial-scale=1" name="viewport"
     meta content="IE=edge" http-equiv="X-UA-Compatible"
-    title = current_page.data.title ? "#{current_page.data.title} - ProjectName" : 'Project Name'
+    title = current_page.data.title ? "#{current_page.data.title} - Viode UI" : 'Viode UI'
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Open+Sans:300,400,700'
     = stylesheet_link_tag 'all', type: nil
     /[if lt IE 9]
       script src="//html5shiv.googlecode.com/svn/trunk/html5.js"
 
   body
     == yield
-    / = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', type: nil
+    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', type: nil
     = javascript_include_tag 'all', type: nil

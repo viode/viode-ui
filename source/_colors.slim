@@ -1,0 +1,15 @@
+.container
+  .page-header
+    h1#colors
+      ' Colors
+      small = link_to '#', '#colors', title: 'permalink'
+
+  h4 Brand
+  .ui-colors
+    .swatch.color-brand
+    .swatch.color-brand-dark
+
+  h4 Palette
+  .ui-colors
+    - 1.upto(20) do |i|
+      .swatch class="color-#{i}"

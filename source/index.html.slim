@@ -1,9 +1,29 @@
 ---
-title: Welcome to Middleman
+title: Style Guides
 ---
 
-.container-fluid
-  .container
-    h1 Middleman Base
+header
+  nav.navbar.navbar-default
+    .container
+      .navbar-header
+        button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#navbar-collapse"
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        = link_to 'Viode', 'http://viode.github.io/', class: 'navbar-brand'
 
-    = link_to 'Read Online Documentation', 'http://middlemanapp.com/'
+      .collapse.navbar-collapse#navbar-collapse
+        ul.nav.navbar-nav
+          li.active
+            = link_to 'Viode UI', 'http://viode.github.io/viode-ui'
+        ul.nav.navbar-nav.navbar-right
+          li.dropdown
+            = link_to 'Jump to', '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' }
+            ul.dropdown-menu
+              li = link_to 'Colors', '#colors'
+              li = link_to 'Fonts', '#fonts'
+
+.container-fluid
+  = partial 'colors'
+  = partial 'fonts'

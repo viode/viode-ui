@@ -1,0 +1,14 @@
+  .container
+    .page-header
+      h1#fonts
+        ' Fonts
+        small = link_to '#', '#fonts', title: 'permalink'
+
+    .ui-fonts
+      - %w(300 400 700).each do |n|
+        p.lead class="w#{n}"
+          | The quick brown fox jumps over the lazy dog
+        pre
+          | 'Open Sans', sans-serif
+          br
+          | font-weight: #{n}
