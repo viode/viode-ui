@@ -1,0 +1,18 @@
+.container
+  .page-header
+    h1#alerts
+      ' Alerts
+      small = link_to '#', '#alerts', title: 'permalink'
+
+  p Alerts are used to display flash messages in app.
+
+  - %w(alert error notice success).each do |type|
+    .alert.alert-dismissible class=flash_class(type)
+      button.close data-dismiss="alert" title="Close" &times;
+      - if type == 'alert'
+        span.fa.fa-exclamation-circle.fa-lg>
+      - else
+        span.fa.fa-info-circle.fa-lg>
+      |
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.

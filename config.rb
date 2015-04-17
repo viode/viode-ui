@@ -14,11 +14,17 @@ set :images_dir, 'images'
 # activate :automatic_image_sizes
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def flash_class(type)
+    case type
+    when 'alert' then 'alert-warning'
+    when 'error' then 'alert-danger'
+    when 'notice' then 'alert-info'
+    when 'success' then 'alert-success'
+    else type
+    end
+  end
+end
 
 # Deployment configuration
 commit_sha = `git log --pretty="%h" -n1`.strip

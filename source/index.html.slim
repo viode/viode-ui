@@ -23,7 +23,12 @@ header
             ul.dropdown-menu
               li = link_to 'Colors', '#colors'
               li = link_to 'Fonts', '#fonts'
+              li.divider
+              li = link_to 'Alerts', '#alerts'
+              li = link_to 'Panels', '#panels'
 
 .container-fluid
   = partial 'colors'
   = partial 'fonts'
+  = partial 'alerts'
+  = partial 'panels'

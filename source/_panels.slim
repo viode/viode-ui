@@ -1,0 +1,16 @@
+.container
+  .page-header
+    h1#panels
+      ' Panels
+      small = link_to '#', '#panels', title: 'permalink'
+
+  p Panels are used to display error messages in app.
+
+  .panel.panel-danger
+    .panel-heading
+      h3.panel-title Errors
+    .panel-body
+      ul
+        li This field is required
+        li Please enter a valid email address
+        li Please enter a valid URL
