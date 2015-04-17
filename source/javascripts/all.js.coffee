@@ -1,7 +1,6 @@
 #= require bootstrap/transition
 #= require bootstrap/dropdown
 #= require bootstrap/alert
-#= require_tree .
 
 $ ->
   hexc = (colorval) ->
