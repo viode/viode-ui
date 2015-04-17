@@ -49,6 +49,7 @@ configure :build do
   # PAGES.map {|p| ignore p }
 
   ignore 'fonts/bootstrap/*'
+  ignore 'stylesheets/main.css'
 
   activate :minify_css
   activate :minify_javascript
